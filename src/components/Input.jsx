@@ -1,4 +1,4 @@
-export function TextInput({label, name, type='text', ...inputProps}) {
+export function Input({label, name, type='text', ...inputProps}) {
     return (
         <div className="inputText">
             <label htmlFor={name}>{label}</label>
