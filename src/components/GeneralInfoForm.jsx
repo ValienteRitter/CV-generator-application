@@ -3,7 +3,7 @@ import { Input } from "./Input"
 export function GeneralInfoForm() {
     return (
         <section>
-            <h1>General Information</h1>
+            <h2>General Information</h2>
             <form>
                 <Input label='Name' name='name' placeholder='John Doe' />
                 <Input type="email" label='Email' name='email' placeholder='johndoe@email.com' />
