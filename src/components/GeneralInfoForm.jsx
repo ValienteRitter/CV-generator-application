@@ -1,4 +1,4 @@
-import { TextInput } from "./TextInput"
+import { TextInput } from "./Input"
 
 export function GeneralInfoForm() {
     return (
