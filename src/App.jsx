@@ -1,9 +1,11 @@
-import { useState } from 'react'
+import { useState } from "react";
+import { CVForm } from './CVForm'
 
-
-function App() {
-
-  
+export function App() {
+    return (
+        <>
+            <CVForm />
+        </>
+    );
 }
 
-export default App
