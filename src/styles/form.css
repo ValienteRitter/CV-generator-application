@@ -1,0 +1,47 @@
+body {
+    background: linear-gradient(red, black);
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem;
+}
+
+.form {
+    background-color: #444444;
+    margin-bottom: 3rem;
+    padding: 3rem;
+    width: 70%;
+    color: white;
+}
+
+.inputText {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.inputText > input {
+    border-radius: 10px;
+    padding: 1rem;
+    border: none;
+    box-shadow: 5px 5px 5px black;
+}
+
+.date-input {
+    display: flex;
+    flex-direction: column;
+}
+
+@media(min-width: 750px) {
+    .date-input {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
