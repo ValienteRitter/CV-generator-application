@@ -45,3 +45,35 @@ body {
         align-items: center;
     }
 }
+
+.dynamic-input-list {
+    display: grid;
+    border: 1px grey solid;
+    padding: 1rem;
+}
+
+.add-input {
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    border-radius: 50%;
+    justify-self: flex-end;
+    margin-bottom: 15px;
+}
+
+.dynamic-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dynamic-input > .inputText {
+    width: 90%;
+}
+
+.delete-input {
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    border-radius: 50%;
+}
