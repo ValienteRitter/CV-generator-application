@@ -1,5 +1,6 @@
 import { PreviewButton } from "./components/PreviewButton";
 import { GeneralInfoPreview } from "./components/GeneralInfoPreview";
+import { EducationPreview } from "./components/EducationPreview";
 
 export function CVPreview({handleClick}) {
     return (
@@ -8,6 +9,8 @@ export function CVPreview({handleClick}) {
             <div className="cv-preview">
                 <GeneralInfoPreview />
                 <hr />
+                <EducationPreview />
+
 
             </div>
         </>
