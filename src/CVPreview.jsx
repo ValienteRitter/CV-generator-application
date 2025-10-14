@@ -7,14 +7,14 @@ export function CVPreview({handleClick}) {
     return (
         <>
             <PreviewButton handleClick={handleClick}/>
-            <div className="cv-preview">
+            <main className="cv-preview">
                 <GeneralInfoPreview />
                 <hr />
                 <EducationPreview />
                 <hr />
                 <WorkExperiencePreview />
 
-            </div>
+            </main>
         </>
     )
 } 
