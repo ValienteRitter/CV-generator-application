@@ -4,10 +4,10 @@ import { WorkExperienceForm } from "./components/WorkExperienceForm";
 import { PreviewButton } from "./components/PreviewButton";
 import './styles/form.css'
 
-export function CVForm() {
+export function CVForm({handleClick}) {
     return (
         <>
-            <PreviewButton />
+            <PreviewButton handleClick={handleClick}/>
             <GeneralInfoForm />
             <EducationForm />
             <WorkExperienceForm />
