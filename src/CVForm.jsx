@@ -8,9 +8,11 @@ export function CVForm({handleClick}) {
     return (
         <>
             <PreviewButton handleClick={handleClick}/>
-            <GeneralInfoForm />
-            <EducationForm />
-            <WorkExperienceForm />
+            <div className="cv-form">
+                <GeneralInfoForm />
+                <EducationForm />
+                <WorkExperienceForm />
+            </div>
         </>
     )
 }
