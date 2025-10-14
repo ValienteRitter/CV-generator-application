@@ -8,11 +8,34 @@ body {
     justify-content: center;
     align-items: center;
     padding: 2.5rem;
+    gap: 3rem;
+}
+
+.preview-button {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    /* margin-bottom: 3rem; */
+}
+
+.preview-button > button {
+    border: none;
+    border-radius: 15px;
+    width: 4rem;
+    height: 4rem;
+    font-size: xxx-large;
+    text-align: center;
+    color: white;
+    background-color: #444444;
+}
+
+.preview-button > button:hover {
+    background-color: grey;
 }
 
 .form {
     background-color: #444444;
-    margin-bottom: 3rem;
+    /* margin-bottom: 3rem; */
     padding: 3rem;
     width: 70%;
     color: white;
