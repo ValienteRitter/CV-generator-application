@@ -10,7 +10,7 @@ export function EducationPreview({schoolName="ADNSU", major="Computer Science", 
                     <div className="learned-skills">
                         <h3>Learned Skills</h3>
                         <ul>
-                            {skills.map(skill => <li>{skill}</li>)}
+                            {skills.map((skill, index) => <li key={index}>{skill}</li>)}
                         </ul>
                     </div>
                 </div>
