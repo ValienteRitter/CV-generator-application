@@ -6,7 +6,7 @@ export function EducationPreview({schoolName="ADNSU", major="Computer Science", 
                 <div className="date">{from}-{until}</div>
                 <div className="info">
                     <h2>{schoolName}</h2>
-                    <p>{major}</p>
+                    <p>Major Title: {major}</p>
                     <div className="learned-skills">
                         <h3>Learned Skills</h3>
                         <ul>

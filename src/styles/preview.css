@@ -1,0 +1,21 @@
+.cv-preview {
+    padding: 20px;
+}
+
+.education-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+}
+
+.work-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+}
+
+.info > p {
+    text-indent: 2rem;
+}
