@@ -1,4 +1,4 @@
-export function GeneralInfoPreview({name="John Doe", email="johndoe@gmail.com", phone="xxx-xxx-xx-xx"}) {
+export function GeneralInfoPreview({data: {name, email, phone}}) {
     return (
         <section className="preview"> 
             <h1>{name}</h1>

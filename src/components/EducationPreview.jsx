@@ -1,4 +1,4 @@
-export function EducationPreview({schoolName="ADNSU", major="Computer Science", from="YYYY", until="YYYY", skills=['Html', 'Css', 'Javascript', 'React']}) {
+export function EducationPreview({data: {schoolName, major, from, until, skills}}) {
     return (
         <section className="preview">
             <h1>Education</h1>

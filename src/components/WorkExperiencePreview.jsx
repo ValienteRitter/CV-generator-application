@@ -1,4 +1,4 @@
-export function WorkExperiencePreview({companyName='Acme Corp', position='Software Developer', from='YYYY', until='YYYY', responsibilities=['Developing', 'Fixing bugs', 'Updating']}) {
+export function WorkExperiencePreview({data: {companyName, position, from, until, responsibilities}}) {
     return (
     <section className="preview">
             <h1>Work Experience</h1>
