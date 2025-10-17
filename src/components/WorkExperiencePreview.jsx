@@ -1,4 +1,4 @@
-export function WorkExperiencePreview({data: {companyName, position, from, until, responsibilities}}) {
+export function WorkExperiencePreview({data: {companyName, positionTitle, from, until, responsibilities}}) {
     return (
     <section className="preview">
             <h1>Work Experience</h1>
@@ -6,7 +6,7 @@ export function WorkExperiencePreview({data: {companyName, position, from, until
                 <div className="date">{from}-{until}</div>
                 <div className="info">
                     <h2>{companyName}</h2>
-                    <p>Position Title: {position}</p>
+                    <p>Position Title: {positionTitle}</p>
                     <div className="responsibilities">
                         <h3>Responsibilities</h3>
                         <ul>
