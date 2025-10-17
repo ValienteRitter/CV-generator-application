@@ -49,6 +49,7 @@ export function App() {
                 <CVPreview data={cvData} handleClick={handleClick} />
             ) : (
                 <CVForm
+                    data = {cvData}
                     handleClick={setPreview}
                     handleChange={(e, section,key) => {
                         handleChange(e, section, key);
