@@ -51,12 +51,25 @@ export function App() {
                     ...prev[section],
                     [key]: [
                         ...prev[section][key],
-                        {id: prev[section][key].length, value: ''}
+                        {id: crypto.randomUUID(), value: ''}
                     ]
                 }
             }
         ))
         console.log(cvData)
+    }
+
+    function removeItem(section, key, id) {
+        const updatedArr = cvData[section][key].filter(item => item.id !== id)
+        setData(prev => ({
+            ...prev,
+            [section]: {
+                ...prev[section],
+                [key]: [
+                    ...updatedArr
+                ]
+            }
+        }))
     }
 
     return (
@@ -71,6 +84,7 @@ export function App() {
                         handleChange(e, section, key);
                     }}
                     handleAddItem={addItem}
+                    handleRemoveItem={removeItem}
                 />
             )}
         </>

@@ -4,14 +4,14 @@ import { WorkExperienceForm } from "./components/WorkExperienceForm";
 import { PreviewButton } from "./components/PreviewButton";
 import './styles/form.css'
 
-export function CVForm({handleClick, handleChange, data: {generalInfo, education, work}, handleAddItem}) {
+export function CVForm({handleClick, handleChange, data: {generalInfo, education, work}, handleAddItem, handleRemoveItem}) {
     return (
         <>
             <PreviewButton handleClick={handleClick}/>
             <main className="cv-form">
                 <GeneralInfoForm handleChange={handleChange} data={generalInfo}/>
-                <EducationForm handleChange={handleChange} data={education} handleAddItem={handleAddItem}/>
-                <WorkExperienceForm handleChange={handleChange} data={work} handleAddItem={handleAddItem}/>
+                <EducationForm handleChange={handleChange} data={education} handleAddItem={handleAddItem} handleRemoveItem={handleRemoveItem}/>
+                <WorkExperienceForm handleChange={handleChange} data={work} handleAddItem={handleAddItem} handleRemoveItem={handleRemoveItem}/>
             </main>
         </>
     )
