@@ -43,6 +43,22 @@ export function App() {
         console.log(cvData)
     }
 
+    function addItem(section, key) {
+        setData(prev => (
+            {
+                ...prev,
+                [section]: {
+                    ...prev[section],
+                    [key]: [
+                        ...prev[section][key],
+                        {id: prev[section][key].length, value: ''}
+                    ]
+                }
+            }
+        ))
+        console.log(cvData)
+    }
+
     return (
         <>
             {isPreview ? (
@@ -54,6 +70,7 @@ export function App() {
                     handleChange={(e, section,key) => {
                         handleChange(e, section, key);
                     }}
+                    handleAddItem={addItem}
                 />
             )}
         </>

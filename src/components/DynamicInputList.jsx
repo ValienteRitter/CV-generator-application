@@ -1,10 +1,15 @@
 import { Input } from "./Input";
 
-export function DynamicInputList({type}) {
+export function DynamicInputList({type, handleAddItem, data}) {
+    const isEducation = type === 'education'
+
     return (
         <div className="dynamic-input-list">
-            <button className="add-input">+</button>
-            <DynamicInput type={type} />
+            <button className="add-input" onClick={(e) => {
+                e.preventDefault()
+                handleAddItem(type, isEducation ? 'skills' : 'responsibilities')
+                }}>+</button>
+                {data.map(({id, value}) => <DynamicInput key={id} type={type} />)}
         </div>
     )
 }
