@@ -72,6 +72,25 @@ export function App() {
         }))
     }
 
+    function updateItem(e, section, key, id) {
+        const updatedArr = cvData[section][key].map(item => {
+            if(item.id === id) {
+                return {...item, value: e.target.value}
+            }
+                return item
+        })
+
+        setData(prev => ({
+            ...prev,
+            [section]: {
+                ...prev[section],
+                [key]: [
+                    ...updatedArr
+                ]
+            }
+        }))
+    }
+
     return (
         <>
             {isPreview ? (
@@ -85,6 +104,7 @@ export function App() {
                     }}
                     handleAddItem={addItem}
                     handleRemoveItem={removeItem}
+                    handleUpdateItem={updateItem}
                 />
             )}
         </>
