@@ -14,7 +14,7 @@ export function App() {
         education: {
             schoolName: "",
             major: "",
-            skills: [],
+            skills: [{id: crypto.randomUUID(), value: ''}],
             from: "",
             until: "",
         },
@@ -22,7 +22,7 @@ export function App() {
         work: {
             companyName: "",
             positionTitle: "",
-            responsibilities: [],
+            responsibilities: [{id: crypto.randomUUID(), value: ''}],
             from: "",
             until: "",
         },
