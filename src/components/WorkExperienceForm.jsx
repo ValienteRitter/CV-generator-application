@@ -9,7 +9,7 @@ export function WorkExperienceForm({handleChange, data: {companyName,positionTit
             <form>
                 <Input value={companyName} label='Company Name' name='company-name' id='company-name' placeholder='Acme Corp' handleChange={(e) => handleChange(e, 'work','companyName')}/>
                 <Input value={positionTitle} label='Position Title' name='position-title' id='position-title' placeholder='Software Developer' handleChange={(e) => handleChange(e, 'work','positionTitle')}/>
-                <DynamicInputList type='work' data={responsibilities} handleAddItem={handleAddItem} handleRemoveItem={handleRemoveItem} handleUpdateItem={handleUpdateItem}/>
+                <DynamicInputList type='work' data={responsibilities} handleAddItem={handleAddItem} handleRemoveItem={handleRemoveItem} handleUpdateItem={handleUpdateItem} />
                 <DateInput />
             </form>
         </section>
