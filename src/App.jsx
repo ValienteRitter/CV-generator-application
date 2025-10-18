@@ -14,7 +14,7 @@ export function App() {
         education: {
             schoolName: "",
             major: "",
-            skills: [{id: crypto.randomUUID(), value: ''}],
+            skills: [{ id: crypto.randomUUID(), value: "" }],
             from: "",
             until: "",
         },
@@ -22,7 +22,7 @@ export function App() {
         work: {
             companyName: "",
             positionTitle: "",
-            responsibilities: [{id: crypto.randomUUID(), value: ''}],
+            responsibilities: [{ id: crypto.randomUUID(), value: "" }],
             from: "",
             until: "",
         },
@@ -40,55 +40,51 @@ export function App() {
                 [key]: e.target.value,
             },
         }));
-        console.log(cvData)
+        console.log(cvData);
     }
 
     function addItem(section, key) {
-        setData(prev => (
-            {
-                ...prev,
-                [section]: {
-                    ...prev[section],
-                    [key]: [
-                        ...prev[section][key],
-                        {id: crypto.randomUUID(), value: ''}
-                    ]
-                }
-            }
-        ))
-        console.log(cvData)
+        setData((prev) => ({
+            ...prev,
+            [section]: {
+                ...prev[section],
+                [key]: [
+                    ...prev[section][key],
+                    { id: crypto.randomUUID(), value: "" },
+                ],
+            },
+        }));
+        console.log(cvData);
     }
 
     function removeItem(section, key, id) {
-        const updatedArr = cvData[section][key].filter(item => item.id !== id)
-        setData(prev => ({
+        const updatedArr = cvData[section][key].filter(
+            (item) => item.id !== id
+        );
+        setData((prev) => ({
             ...prev,
             [section]: {
                 ...prev[section],
-                [key]: [
-                    ...updatedArr
-                ]
-            }
-        }))
+                [key]: [...updatedArr],
+            },
+        }));
     }
 
     function updateItem(e, section, key, id) {
-        const updatedArr = cvData[section][key].map(item => {
-            if(item.id === id) {
-                return {...item, value: e.target.value}
+        const updatedArr = cvData[section][key].map((item) => {
+            if (item.id === id) {
+                return { ...item, value: e.target.value };
             }
-                return item
-        })
+            return item;
+        });
 
-        setData(prev => ({
+        setData((prev) => ({
             ...prev,
             [section]: {
                 ...prev[section],
-                [key]: [
-                    ...updatedArr
-                ]
-            }
-        }))
+                [key]: [...updatedArr],
+            },
+        }));
     }
 
     return (
@@ -97,9 +93,9 @@ export function App() {
                 <CVPreview data={cvData} handleClick={handleClick} />
             ) : (
                 <CVForm
-                    data = {cvData}
+                    data={cvData}
                     handleClick={setPreview}
-                    handleChange={(e, section,key) => {
+                    handleChange={(e, section, key) => {
                         handleChange(e, section, key);
                     }}
                     handleAddItem={addItem}

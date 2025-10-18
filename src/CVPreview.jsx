@@ -2,20 +2,22 @@ import { PreviewButton } from "./components/PreviewButton";
 import { GeneralInfoPreview } from "./components/GeneralInfoPreview";
 import { EducationPreview } from "./components/EducationPreview";
 import { WorkExperiencePreview } from "./components/WorkExperiencePreview";
-import './styles/preview.css'
+import "./styles/preview.css";
 
-export function CVPreview({data: {generalInfo, education, work}, handleClick}) {
+export function CVPreview({
+    data: { generalInfo, education, work },
+    handleClick,
+}) {
     return (
         <>
-            <PreviewButton handleClick={handleClick}/>
+            <PreviewButton handleClick={handleClick} />
             <main className="cv-preview">
-                <GeneralInfoPreview data={generalInfo}/>
+                <GeneralInfoPreview data={generalInfo} />
                 <hr />
-                <EducationPreview data={education}/>
+                <EducationPreview data={education} />
                 <hr />
-                <WorkExperiencePreview data={work}/>
-
+                <WorkExperiencePreview data={work} />
             </main>
         </>
-    )
-} 
+    );
+}
