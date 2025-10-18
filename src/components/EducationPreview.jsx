@@ -10,7 +10,7 @@ export function EducationPreview({data: {schoolName, major, from, until, skills}
                     <div className="learned-skills">
                         <h3>Learned Skills</h3>
                         <ul>
-                            {skills.map((skill, index) => <li key={index}>{skill}</li>)}
+                            {skills.map(({id, value}) => <li key={id}>{value}</li>)}
                         </ul>
                     </div>
                 </div>

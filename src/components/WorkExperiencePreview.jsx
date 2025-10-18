@@ -10,7 +10,7 @@ export function WorkExperiencePreview({data: {companyName, positionTitle, from, 
                     <div className="responsibilities">
                         <h3>Responsibilities</h3>
                         <ul>
-                            {responsibilities.map((responsibility, index) => <li key={index}>{responsibility}</li>)}
+                            {responsibilities.map(({id, value}) => <li key={id}>{value}</li>)}
                         </ul>
                     </div>
                 </div>
