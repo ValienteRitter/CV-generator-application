@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { CVForm } from "./CVForm";
-import { CVPreview } from "./CvPreview";
+import { CVPreview } from "./CVPreview";
 
 export function App() {
     const [isPreview, setPreview] = useState(false);
